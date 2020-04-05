@@ -1,10 +1,18 @@
-public class Students {
+import java.io.*;
+
+public class Students implements Serializable {
     private Long id;
     private String name;
     private String surname;
     private int age;
 
     public Students() {
+    }
+    public Students(String name, String surname, int age) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
     }
 
     public Students(Long id, String name, String surname, int age) {
@@ -44,5 +52,15 @@ public class Students {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Students{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
